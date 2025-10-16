@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab05.GUI", "Lab05\Lab05.GUI.csproj", "{718A6A9C-8F8C-4A77-B651-338ECCEB9504}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab05.BUS", "Lab05.BLL\Lab05.BUS.csproj", "{4C1C6A86-8117-4FA9-94F8-4BF2E6CA8A31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab05.DAL", "Lab05.DAL\Lab05.DAL.csproj", "{2ECA2225-6F50-4ADB-8231-E45C54FED660}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{718A6A9C-8F8C-4A77-B651-338ECCEB9504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{718A6A9C-8F8C-4A77-B651-338ECCEB9504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{718A6A9C-8F8C-4A77-B651-338ECCEB9504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{718A6A9C-8F8C-4A77-B651-338ECCEB9504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C1C6A86-8117-4FA9-94F8-4BF2E6CA8A31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C1C6A86-8117-4FA9-94F8-4BF2E6CA8A31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C1C6A86-8117-4FA9-94F8-4BF2E6CA8A31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C1C6A86-8117-4FA9-94F8-4BF2E6CA8A31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ECA2225-6F50-4ADB-8231-E45C54FED660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ECA2225-6F50-4ADB-8231-E45C54FED660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ECA2225-6F50-4ADB-8231-E45C54FED660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ECA2225-6F50-4ADB-8231-E45C54FED660}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F77DC3D-844D-4209-A9CE-5B6692FC8CF7}
+	EndGlobalSection
+EndGlobal
