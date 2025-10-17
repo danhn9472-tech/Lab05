@@ -9,7 +9,7 @@ namespace Lab05.DAL.Entities
     [Table("Student")]
     public partial class Student
     {
-        public int StudentID { get; set; }
+        public string StudentID { get; set; }
 
         [Required]
         [StringLength(255)]

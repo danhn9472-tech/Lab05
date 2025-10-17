@@ -53,7 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="StudentDAL.cs" />
     <Compile Include="Entities\Faculty.cs" />
     <Compile Include="Entities\Major.cs" />
     <Compile Include="Entities\Student.cs" />

@@ -1,10 +1,11 @@
-﻿using Lab05.DAL.Entities;
+﻿using Lab05.DAL;
+using Lab05.DAL.Entities;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Entity.Migrations;
 
 namespace Lab05.BLL
 {
@@ -31,8 +32,7 @@ namespace Lab05.BLL
         public Student FindById(string studentId)
         {
             StudentModel context = new StudentModel();
-            int Id = int.Parse(studentId);
-            return context.Students.FirstOrDefault(p => p.StudentID == Id);
+            return context.Students.FirstOrDefault(p => p.StudentID == studentId);
         }
 
         public void InsertUpdate(Student s)
@@ -41,6 +41,24 @@ namespace Lab05.BLL
             context.Students.AddOrUpdate(s);
             context.SaveChanges();
 
+        }
+        public void AddStudent(Student s)
+        {
+            // Có thể thêm kiểm tra hợp lệ ở đây
+            StudentDAL studentDAL = new StudentDAL();
+            studentDAL.Insert(s);
+        }
+
+        public void UpdateStudent(Student s)
+        {
+            StudentDAL studentDAL = new StudentDAL();
+            studentDAL.Update(s);
+        }
+
+        public void DeleteStudent(string id)
+        {
+            StudentDAL studentDAL = new StudentDAL();
+            studentDAL.Delete(id);
         }
     }
 }

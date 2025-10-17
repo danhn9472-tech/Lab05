@@ -30,24 +30,25 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnChooseImage = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.picAvatar = new System.Windows.Forms.PictureBox();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.cmbFaculty = new System.Windows.Forms.ComboBox();
+            this.txtAverageScore = new System.Windows.Forms.TextBox();
+            this.txtStudentName = new System.Windows.Forms.TextBox();
+            this.txtStudentID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtStudentID = new System.Windows.Forms.TextBox();
-            this.txtStudentName = new System.Windows.Forms.TextBox();
-            this.txtAverageScore = new System.Windows.Forms.TextBox();
-            this.cmbFaculty = new System.Windows.Forms.ComboBox();
-            this.picAvatar = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.dgvStudent = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.ckbox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
@@ -58,7 +59,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(242, 9);
+            this.label1.Location = new System.Drawing.Point(270, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(284, 37);
             this.label1.TabIndex = 0;
@@ -66,9 +67,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnChooseImage);
+            this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.picAvatar);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnDel);
             this.groupBox1.Controls.Add(this.cmbFaculty);
             this.groupBox1.Controls.Add(this.txtAverageScore);
             this.groupBox1.Controls.Add(this.txtStudentName);
@@ -85,14 +87,73 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sinh viên";
             // 
-            // label2
+            // btnChooseImage
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Khoa";
+            this.btnChooseImage.Location = new System.Drawing.Point(234, 192);
+            this.btnChooseImage.Name = "btnChooseImage";
+            this.btnChooseImage.Size = new System.Drawing.Size(29, 23);
+            this.btnChooseImage.TabIndex = 5;
+            this.btnChooseImage.Text = "...";
+            this.btnChooseImage.UseVisualStyleBackColor = true;
+            this.btnChooseImage.Click += new System.EventHandler(this.btnChooseImage_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(107, 280);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 3;
+            this.btnAdd.Text = "Add/Update";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // picAvatar
+            // 
+            this.picAvatar.Location = new System.Drawing.Point(107, 187);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Size = new System.Drawing.Size(106, 70);
+            this.picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAvatar.TabIndex = 4;
+            this.picAvatar.TabStop = false;
+            // 
+            // btnDel
+            // 
+            this.btnDel.Location = new System.Drawing.Point(201, 280);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(75, 23);
+            this.btnDel.TabIndex = 3;
+            this.btnDel.Text = "Delete";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // cmbFaculty
+            // 
+            this.cmbFaculty.FormattingEnabled = true;
+            this.cmbFaculty.Location = new System.Drawing.Point(107, 112);
+            this.cmbFaculty.Name = "cmbFaculty";
+            this.cmbFaculty.Size = new System.Drawing.Size(156, 21);
+            this.cmbFaculty.TabIndex = 2;
+            // 
+            // txtAverageScore
+            // 
+            this.txtAverageScore.Location = new System.Drawing.Point(107, 151);
+            this.txtAverageScore.Name = "txtAverageScore";
+            this.txtAverageScore.Size = new System.Drawing.Size(56, 20);
+            this.txtAverageScore.TabIndex = 3;
+            // 
+            // txtStudentName
+            // 
+            this.txtStudentName.Location = new System.Drawing.Point(107, 72);
+            this.txtStudentName.Name = "txtStudentName";
+            this.txtStudentName.Size = new System.Drawing.Size(156, 20);
+            this.txtStudentName.TabIndex = 3;
+            // 
+            // txtStudentID
+            // 
+            this.txtStudentID.Location = new System.Drawing.Point(107, 31);
+            this.txtStudentID.Name = "txtStudentID";
+            this.txtStudentID.Size = new System.Drawing.Size(156, 20);
+            this.txtStudentID.TabIndex = 3;
             // 
             // label3
             // 
@@ -112,15 +173,6 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Họ tên";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 158);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Điểm trung bình";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -130,42 +182,23 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Ảnh đại diện";
             // 
-            // txtStudentID
+            // label5
             // 
-            this.txtStudentID.Location = new System.Drawing.Point(107, 31);
-            this.txtStudentID.Name = "txtStudentID";
-            this.txtStudentID.Size = new System.Drawing.Size(156, 20);
-            this.txtStudentID.TabIndex = 3;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(24, 158);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Điểm trung bình";
             // 
-            // txtStudentName
+            // label2
             // 
-            this.txtStudentName.Location = new System.Drawing.Point(107, 72);
-            this.txtStudentName.Name = "txtStudentName";
-            this.txtStudentName.Size = new System.Drawing.Size(156, 20);
-            this.txtStudentName.TabIndex = 3;
-            // 
-            // txtAverageScore
-            // 
-            this.txtAverageScore.Location = new System.Drawing.Point(107, 151);
-            this.txtAverageScore.Name = "txtAverageScore";
-            this.txtAverageScore.Size = new System.Drawing.Size(56, 20);
-            this.txtAverageScore.TabIndex = 3;
-            // 
-            // cmbFaculty
-            // 
-            this.cmbFaculty.FormattingEnabled = true;
-            this.cmbFaculty.Location = new System.Drawing.Point(107, 112);
-            this.cmbFaculty.Name = "cmbFaculty";
-            this.cmbFaculty.Size = new System.Drawing.Size(156, 21);
-            this.cmbFaculty.TabIndex = 2;
-            // 
-            // picAvatar
-            // 
-            this.picAvatar.Location = new System.Drawing.Point(107, 187);
-            this.picAvatar.Name = "picAvatar";
-            this.picAvatar.Size = new System.Drawing.Size(106, 70);
-            this.picAvatar.TabIndex = 4;
-            this.picAvatar.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(24, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Khoa";
             // 
             // dgvStudent
             // 
@@ -181,6 +214,7 @@
             this.dgvStudent.Name = "dgvStudent";
             this.dgvStudent.Size = new System.Drawing.Size(589, 270);
             this.dgvStudent.TabIndex = 2;
+            this.dgvStudent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudent_CellClick);
             // 
             // Column1
             // 
@@ -206,26 +240,6 @@
             // 
             this.Column5.HeaderText = "Chuyên ngành";
             this.Column5.Name = "Column5";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(201, 280);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(107, 280);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Add/Update";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ckbox1
             // 
@@ -272,7 +286,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox picAvatar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.ComboBox cmbFaculty;
         private System.Windows.Forms.TextBox txtAverageScore;
         private System.Windows.Forms.DataGridView dgvStudent;
@@ -281,8 +295,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.CheckBox ckbox1;
+        private System.Windows.Forms.Button btnChooseImage;
     }
 }
 
